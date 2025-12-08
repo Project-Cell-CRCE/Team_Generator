@@ -124,6 +124,23 @@ export default {
             transform: "scale(1.2)",
           },
         },
+        "color-shift": {
+          "0%": {
+            backgroundColor: "hsl(220 30% 5%)",
+          },
+          "25%": {
+            backgroundColor: "hsl(260 30% 8%)",
+          },
+          "50%": {
+            backgroundColor: "hsl(200 30% 6%)",
+          },
+          "75%": {
+            backgroundColor: "hsl(280 25% 7%)",
+          },
+          "100%": {
+            backgroundColor: "hsl(220 30% 5%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -134,6 +151,7 @@ export default {
         "spin-slow": "spin-slow 8s linear infinite",
         "twinkle": "twinkle 2s ease-in-out infinite alternate",
         "float-star": "float-star 20s linear infinite",
+        "color-shift": "color-shift 8s ease-in-out infinite",
       },
     },
   },
