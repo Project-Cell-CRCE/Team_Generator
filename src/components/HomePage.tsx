@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -81,29 +81,36 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
     });
   };
 
-  // Create animated stars
-  const createStars = () => {
-    return Array.from({ length: 50 }).map((_, i) => (
-      <div
-        key={i}
-        className="star"
-        style={{
-          width: `${Math.random() * 3 + 1}px`,
-          height: `${Math.random() * 3 + 1}px`,
-          top: `${Math.random() * 100}%`,
-          left: `${Math.random() * 100}%`,
-          animationDelay: `${Math.random() * 20}s`,
-          animationDuration: `${20 + Math.random() * 10}s`,
-        }}
-      />
-    ));
-  };
+  // Memoize stars so they don't regenerate on re-renders
+  const stars = useMemo(() => {
+    return Array.from({ length: 50 }).map((_, i) => ({
+      width: Math.random() * 3 + 1,
+      height: Math.random() * 3 + 1,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      animationDelay: Math.random() * 20,
+      animationDuration: 20 + Math.random() * 10,
+    }));
+  }, []);
 
   return (
     <div className="min-h-screen bg-background p-6 relative overflow-hidden galaxy-bg">
       {/* Animated galaxy background with stars */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {createStars()}
+        {stars.map((star, i) => (
+          <div
+            key={i}
+            className="star"
+            style={{
+              width: `${star.width}px`,
+              height: `${star.height}px`,
+              top: `${star.top}%`,
+              left: `${star.left}%`,
+              animationDelay: `${star.animationDelay}s`,
+              animationDuration: `${star.animationDuration}s`,
+            }}
+          />
+        ))}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-3/4 left-3/4 w-64 h-64 bg-secondary/10 rounded-full blur-2xl animate-float"></div>
