@@ -111,18 +111,18 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 animate-fade-in">
           <h1 className="text-6xl font-bold bg-gradient-gaming bg-clip-text text-transparent mb-4 animate-pulse-neon">
             TEAM GENERATOR
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
             Create balanced teams for your gaming sessions
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Team Configuration */}
-          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit">
+          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-primary">
                 <Target className="w-5 h-5" />
@@ -198,7 +198,7 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
           </Card>
 
           {/* Player Names */}
-          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit">
+          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-primary">
                 <Users className="w-5 h-5" />
@@ -255,7 +255,7 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
         )}
 
         {/* Generate Button */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
           <Button
             onClick={generateTeams}
             size="lg"
