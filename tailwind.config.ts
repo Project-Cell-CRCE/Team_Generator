@@ -141,6 +141,46 @@ export default {
             backgroundColor: "hsl(220 30% 5%)",
           },
         },
+        "slide-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(40px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-40px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(40px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "slide-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-40px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -152,6 +192,10 @@ export default {
         "twinkle": "twinkle 2s ease-in-out infinite alternate",
         "float-star": "float-star 20s linear infinite",
         "color-shift": "color-shift 8s ease-in-out infinite",
+        "slide-up": "slide-up 0.5s ease-out forwards",
+        "slide-down": "slide-down 0.5s ease-out forwards",
+        "slide-left": "slide-left 0.5s ease-out forwards",
+        "slide-right": "slide-right 0.5s ease-out forwards",
       },
     },
   },

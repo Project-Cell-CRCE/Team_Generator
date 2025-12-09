@@ -111,18 +111,18 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-8 animate-fade-in">
+        <div className="text-center mb-8 opacity-0 animate-slide-down" style={{ animationDelay: '0.1s' }}>
           <h1 className="text-6xl font-bold bg-gradient-gaming bg-clip-text text-transparent mb-4 animate-pulse-neon">
             TEAM GENERATOR
           </h1>
-          <p className="text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+          <p className="text-xl text-muted-foreground">
             Create balanced teams for your gaming sessions
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Team Configuration */}
-          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit opacity-0 animate-slide-right" style={{ animationDelay: '0.25s' }}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-primary">
                 <Target className="w-5 h-5" />
@@ -198,7 +198,7 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
           </Card>
 
           {/* Player Names */}
-          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
+          <Card className="border-glow bg-card/50 backdrop-blur-sm h-fit opacity-0 animate-slide-left" style={{ animationDelay: '0.35s' }}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-primary">
                 <Users className="w-5 h-5" />
@@ -255,7 +255,7 @@ const HomePage = ({ onGenerateTeams, previousData }: HomePageProps) => {
         )}
 
         {/* Generate Button */}
-        <div className="text-center mt-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+        <div className="text-center mt-8 opacity-0 animate-slide-up" style={{ animationDelay: '0.5s' }}>
           <Button
             onClick={generateTeams}
             size="lg"
