@@ -31,18 +31,18 @@ const TeamsPage = ({ teams, onRegenerate, onBackToHome }: TeamsPageProps) => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 animate-fade-in">
           <h1 className="text-5xl font-bold bg-gradient-gaming bg-clip-text text-transparent mb-4 animate-pulse-neon">
             TEAMS GENERATED
           </h1>
-          <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground">
+          <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
             <Trophy className="w-5 h-5 text-primary" />
             {teams.length} Teams Created
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-center gap-4 mb-8">
+        <div className="flex justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
           <Button
             onClick={onBackToHome}
             variant="outline"
@@ -65,7 +65,8 @@ const TeamsPage = ({ teams, onRegenerate, onBackToHome }: TeamsPageProps) => {
           {teams.map((team, index) => (
             <Card
               key={index}
-              className="border-glow bg-card/50 backdrop-blur-sm hover:glow-primary transition-all duration-300 transform hover:scale-105"
+              className="border-glow bg-card/50 backdrop-blur-sm hover:glow-primary transition-all duration-300 transform hover:scale-105 animate-fade-in"
+              style={{ animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: 'both' }}
             >
               <CardHeader className="pb-3">
                 <CardTitle className="flex items-center justify-between">
@@ -102,7 +103,7 @@ const TeamsPage = ({ teams, onRegenerate, onBackToHome }: TeamsPageProps) => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <Card className="inline-block border-glow bg-card/30 backdrop-blur-sm">
             <CardContent className="p-6">
               <div className="grid grid-cols-3 gap-8 text-center">
