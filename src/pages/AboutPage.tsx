@@ -141,25 +141,80 @@ const AboutPage = () => {
           </CardContent>
         </Card>
 
-        {/* Social Links */}
+        {/* Developed By Section */}
+        <Card className="border-glow bg-gradient-to-br from-card/80 to-secondary/30 backdrop-blur-sm mb-16 overflow-hidden opacity-0 animate-slide-up" style={{ animationDelay: '0.85s', animationFillMode: 'both' }}>
+          <CardContent className="p-8">
+            <h2 className="text-2xl font-bold text-primary mb-8 text-center flex items-center justify-center gap-2">
+              <Code className="w-6 h-6" />
+              Developed By
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Developer Avatar */}
+              <div className="relative group">
+                <div className="w-32 h-32 rounded-full bg-gradient-gaming p-1 group-hover:animate-spin-slow transition-all duration-500">
+                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+                    <span className="text-5xl">👨‍💻</span>
+                  </div>
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-green-500 flex items-center justify-center border-4 border-card">
+                  <span className="text-xs">✓</span>
+                </div>
+              </div>
+              
+              {/* Developer Info */}
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Your Name Here</h3>
+                <p className="text-primary font-medium mb-3">Full Stack Developer</p>
+                <p className="text-muted-foreground mb-4 max-w-md">
+                  Passionate about creating beautiful, interactive web experiences. 
+                  Specializing in React, TypeScript, and modern UI/UX design.
+                </p>
+                
+                {/* Developer Skills Tags */}
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
+                  <span className="px-3 py-1 text-xs rounded-full bg-primary/20 text-primary border border-primary/30">React</span>
+                  <span className="px-3 py-1 text-xs rounded-full bg-accent/20 text-accent border border-accent/30">TypeScript</span>
+                  <span className="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400 border border-green-500/30">Node.js</span>
+                  <span className="px-3 py-1 text-xs rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Tailwind</span>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex gap-3 justify-center md:justify-start">
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                    <Github className="w-4 h-4" />
+                  </Button>
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                    <Linkedin className="w-4 h-4" />
+                  </Button>
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                    <Twitter className="w-4 h-4" />
+                  </Button>
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                    <Mail className="w-4 h-4" />
+                  </Button>
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Contact Section */}
         <div className="text-center opacity-0 animate-fade-in" style={{ animationDelay: '0.9s', animationFillMode: 'both' }}>
-          <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Want to Connect?</h2>
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+            Feel free to reach out for collaborations, questions, or just to say hi!
+          </p>
           <div className="flex justify-center gap-4">
+            <Button variant="default" size="lg" className="gap-2 bg-gradient-gaming hover:opacity-90">
+              <Mail className="w-5 h-5" />
+              Get in Touch
+            </Button>
             <Button variant="outline" size="lg" className="hover-glow gap-2">
               <Github className="w-5 h-5" />
-              GitHub
-            </Button>
-            <Button variant="outline" size="lg" className="hover-glow gap-2">
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
-            </Button>
-            <Button variant="outline" size="lg" className="hover-glow gap-2">
-              <Twitter className="w-5 h-5" />
-              Twitter
-            </Button>
-            <Button variant="outline" size="lg" className="hover-glow gap-2">
-              <Mail className="w-5 h-5" />
-              Email
+              View Projects
             </Button>
           </div>
         </div>
