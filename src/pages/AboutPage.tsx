@@ -180,16 +180,16 @@ const AboutPage = () => {
 
                 {/* Social Links */}
                 <div className="flex gap-3 justify-center md:justify-start">
-                  <Button onclick="document.location.href='https://github.com/LeroyEdi7' variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
                     <Github className="w-4 h-4" />
                   </Button>
-                  <Button onclick="document.location.href='https://www.linkedin.com/in/leroy-edison-84303933b/' variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
                     <Linkedin className="w-4 h-4" />
                   </Button>
-                  <Button onclick="document.location.href='https://www.example.com' variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
                     <Twitter className="w-4 h-4" />
                   </Button>
-                  <Button onclick="document.location.href='https://www.example.com' variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button variant="outline" size="sm" className="hover-glow gap-2">
                     <Mail className="w-4 h-4" />
                   </Button>
                   <Button variant="outline" size="sm" className="hover-glow gap-2">
