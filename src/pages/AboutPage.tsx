@@ -180,10 +180,10 @@ const AboutPage = () => {
 
                 {/* Social Links */}
                 <div className="flex gap-3 justify-center md:justify-start">
-                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button onClick={() => window.open("https://github.com/LeroyEdi7", "_blank")} variant="outline" size="sm" className="hover-glow gap-2">
                     <Github className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button onClick={() => window.open("https://www.linkedin.com/in/leroy-edison-84303933b/", "_blank")} variant="outline" size="sm" className="hover-glow gap-2">
                     <Linkedin className="w-4 h-4" />
                   </Button>
                   <Button variant="outline" size="sm" className="hover-glow gap-2">
