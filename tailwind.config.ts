@@ -199,6 +199,14 @@ export default {
             transform: "scale(1)",
           },
         },
+        "gradient-x": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -216,6 +224,7 @@ export default {
         "slide-right": "slide-right 0.5s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
+        "gradient-x": "gradient-x 3s ease infinite",
       },
     },
   },

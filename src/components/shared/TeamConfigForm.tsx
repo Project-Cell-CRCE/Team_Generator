@@ -68,7 +68,27 @@ const TeamConfigForm = ({ onSubmit, previousData, submitLabel = 'Start Assignmen
 
   const filledPlayers = playerNames.filter(name => name.trim() !== '').length;
 
+  // Validation: Check for sensible team configurations
+  const getValidationError = (): string | null => {
+    if (filledPlayers < 2) return 'Enter at least 2 player names';
+    if (filledPlayers < numTeams) return `Need at least ${numTeams} players for ${numTeams} teams`;
+    if (numTeams > filledPlayers) return `Too many teams for ${filledPlayers} players`;
+    if (filledPlayers === 2 && numTeams > 2) return '2 players can only form 2 teams (1 player each)';
+    if (filledPlayers === 3 && numTeams > 3) return '3 players can form max 3 teams';
+    
+    // Check if teams would be extremely unbalanced
+    const minPerTeam = Math.floor(filledPlayers / numTeams);
+    const maxPerTeam = Math.ceil(filledPlayers / numTeams);
+    if (minPerTeam === 0) return `Not enough players for ${numTeams} teams`;
+    
+    return null;
+  };
+
+  const validationError = getValidationError();
+  const isValid = validationError === null;
+
   const handleSubmit = () => {
+    if (!isValid) return;
     onSubmit({
       numTeams,
       playersPerTeam,
@@ -233,14 +253,19 @@ const TeamConfigForm = ({ onSubmit, previousData, submitLabel = 'Start Assignmen
       <div className="text-center mt-8 opacity-0 animate-slide-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
         <Button
           onClick={handleSubmit}
-          disabled={filledPlayers < 2 || isLoading}
+          disabled={!isValid || isLoading}
           size="lg"
           className="bg-gradient-gaming hover:glow-primary text-lg px-8 py-6 font-bold disabled:opacity-50"
         >
           {isLoading ? 'Processing...' : submitLabel}
         </Button>
-        {filledPlayers < 2 && (
-          <p className="text-destructive text-sm mt-2">Enter at least 2 player names</p>
+        {validationError && (
+          <p className="text-destructive text-sm mt-2">{validationError}</p>
+        )}
+        {isValid && filledPlayers >= 2 && (
+          <p className="text-green-400 text-sm mt-2">
+            ✓ {filledPlayers} players will be divided into {numTeams} teams
+          </p>
         )}
       </div>
     </TooltipProvider>
