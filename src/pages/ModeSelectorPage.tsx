@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import PageLayout from '@/components/shared/PageLayout';
-import { RotateCcw, Dices, Layers, Target } from 'lucide-react';
+import { RotateCcw, Dices, Layers, Zap } from 'lucide-react';
 
 const modeCards = [
   {
@@ -30,12 +30,12 @@ const modeCards = [
     path: '/mode/shuffle-deck',
   },
   {
-    id: 'target-lock',
-    title: 'Target Lock',
-    description: 'Throw darts at a dartboard! Team wedges determine assignments. Watch the dart fly for each player.',
-    icon: Target,
-    gradient: 'from-orange-500 via-red-500 to-pink-500',
-    path: '/mode/target-lock',
+    id: 'direct-allocation',
+    title: 'Direct Allocation',
+    description: 'Quick and efficient! Watch players get randomly assigned to teams one by one with smooth animations.',
+    icon: Zap,
+    gradient: 'from-orange-500 via-amber-500 to-yellow-500',
+    path: '/mode/direct-allocation',
   },
 ];
 
