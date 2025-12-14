@@ -163,7 +163,7 @@ const AboutPage = () => {
               
               {/* Developer Info */}
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-2">Your Name Here</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-2">Leroy Daniel Edison</h3>
                 <p className="text-primary font-medium mb-3">Full Stack Developer</p>
                 <p className="text-muted-foreground mb-4 max-w-md">
                   Passionate about creating beautiful, interactive web experiences. 
@@ -180,16 +180,16 @@ const AboutPage = () => {
 
                 {/* Social Links */}
                 <div className="flex gap-3 justify-center md:justify-start">
-                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button onclick="document.location.href='https://github.com/LeroyEdi7' variant="outline" size="sm" className="hover-glow gap-2">
                     <Github className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button onclick="document.location.href='https://www.linkedin.com/in/leroy-edison-84303933b/' variant="outline" size="sm" className="hover-glow gap-2">
                     <Linkedin className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button onclick="document.location.href='https://www.example.com' variant="outline" size="sm" className="hover-glow gap-2">
                     <Twitter className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="sm" className="hover-glow gap-2">
+                  <Button onclick="document.location.href='https://www.example.com' variant="outline" size="sm" className="hover-glow gap-2">
                     <Mail className="w-4 h-4" />
                   </Button>
                   <Button variant="outline" size="sm" className="hover-glow gap-2">
