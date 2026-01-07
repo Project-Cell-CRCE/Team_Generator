@@ -1,7 +1,7 @@
 import React from 'react';
 import PageLayout from '@/components/shared/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
-import { Github, Linkedin, Twitter, Mail, Code, Sparkles, Zap, Heart, ExternalLink, Building2, Users, Award } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Code, Sparkles, Zap, Heart, ExternalLink, Building2, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const AboutPage = () => {
@@ -151,20 +151,30 @@ const AboutPage = () => {
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Council Logo */}
-              <div className="relative group">
+              <a 
+                href="https://technicalcouncil.example.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative group cursor-pointer"
+              >
                 <div className="w-28 h-28 rounded-2xl bg-gradient-gaming p-1 group-hover:scale-105 transition-transform duration-500">
                   <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
                     <Code className="w-12 h-12 text-primary" />
                   </div>
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-gradient-gaming flex items-center justify-center border-4 border-card">
-                  <Award className="w-5 h-5 text-background" />
-                </div>
-              </div>
+              </a>
               
               {/* Council Info */}
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-2">Technical Council</h3>
+                <a 
+                  href="https://technicalcouncil.example.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <h3 className="text-2xl font-bold text-foreground">Technical Council</h3>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                </a>
                 <p className="text-primary font-medium mb-3">Innovation • Development • Excellence</p>
                 <p className="text-muted-foreground mb-4 max-w-lg">
                   This project is developed under the Technical Council. The council is dedicated to fostering 
