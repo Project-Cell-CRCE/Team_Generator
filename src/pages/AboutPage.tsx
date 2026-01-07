@@ -166,16 +166,17 @@ const AboutPage = () => {
               
               {/* Council Info */}
               <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Technical Council</h3>
+                <p className="text-primary font-medium mb-3">Innovation • Development • Excellence</p>
                 <a 
                   href="https://technicalcouncil.example.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-3"
                 >
-                  <h3 className="text-2xl font-bold text-foreground">Technical Council</h3>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                  <ExternalLink className="w-4 h-4" />
+                  <span className="text-sm underline">Visit Technical Council Website</span>
                 </a>
-                <p className="text-primary font-medium mb-3">Innovation • Development • Excellence</p>
                 <p className="text-muted-foreground mb-4 max-w-lg">
                   This project is developed under the Technical Council. The council is dedicated to fostering 
                   innovation and technical excellence, creating useful and engaging applications for the community.
