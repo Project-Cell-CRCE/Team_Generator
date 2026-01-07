@@ -152,7 +152,7 @@ const AboutPage = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Council Logo */}
               <a 
-                href="https://technicalcouncil.example.com" 
+                href="https://project-cell-crce.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative group cursor-pointer"
@@ -166,16 +166,16 @@ const AboutPage = () => {
               
               {/* Council Info */}
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-2">Technical Council</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-2">Project Cell</h3>
                 <p className="text-primary font-medium mb-3">Innovation • Development • Excellence</p>
                 <a 
-                  href="https://technicalcouncil.example.com" 
+                  href="https://project-cell-crce.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-3"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span className="text-sm underline">Visit Technical Council Website</span>
+                  <span className="text-sm underline">Visit Project Cell Website</span>
                 </a>
                 <p className="text-muted-foreground mb-4 max-w-lg">
                   This project is developed under the Technical Council. The council is dedicated to fostering 
