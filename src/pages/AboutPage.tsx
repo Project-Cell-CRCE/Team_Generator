@@ -1,7 +1,7 @@
 import React from 'react';
 import PageLayout from '@/components/shared/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
-import { Github, Linkedin, Twitter, Mail, Code, Sparkles, Zap, Heart, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Code, Sparkles, Zap, Heart, ExternalLink, Building2, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const AboutPage = () => {
@@ -141,6 +141,69 @@ const AboutPage = () => {
           </CardContent>
         </Card>
 
+        {/* Technical Council Section */}
+        <Card className="border-glow bg-gradient-to-br from-card/80 to-primary/10 backdrop-blur-sm mb-16 overflow-hidden relative opacity-0 animate-slide-up" style={{ animationDelay: '0.82s', animationFillMode: 'both' }}>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-gaming" />
+          <CardContent className="p-8">
+            <h2 className="text-2xl font-bold text-primary mb-8 text-center flex items-center justify-center gap-2">
+              <Building2 className="w-6 h-6" />
+              Technical Council
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Council Logo */}
+              <div className="relative group">
+                <div className="w-28 h-28 rounded-2xl bg-gradient-gaming p-1 group-hover:scale-105 transition-transform duration-500">
+                  <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
+                    <Code className="w-12 h-12 text-primary" />
+                  </div>
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-gradient-gaming flex items-center justify-center border-4 border-card">
+                  <Award className="w-5 h-5 text-background" />
+                </div>
+              </div>
+              
+              {/* Council Info */}
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Technical Council</h3>
+                <p className="text-primary font-medium mb-3">Innovation • Development • Excellence</p>
+                <p className="text-muted-foreground mb-4 max-w-lg">
+                  This project is developed under the Technical Council. The council is dedicated to fostering 
+                  innovation and technical excellence, creating useful and engaging applications for the community.
+                </p>
+                
+                {/* Council Focus Areas */}
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
+                  <span className="px-3 py-1 text-xs rounded-full bg-primary/20 text-primary border border-primary/30 flex items-center gap-1">
+                    <Code className="w-3 h-3" /> Web Development
+                  </span>
+                  <span className="px-3 py-1 text-xs rounded-full bg-accent/20 text-accent border border-accent/30 flex items-center gap-1">
+                    <Users className="w-3 h-3" /> Team Projects
+                  </span>
+                  <span className="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" /> Innovation
+                  </span>
+                </div>
+
+                {/* Council Stats */}
+                <div className="flex gap-8 justify-center md:justify-start">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold bg-gradient-gaming bg-clip-text text-transparent">10+</div>
+                    <div className="text-xs text-muted-foreground">Projects</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold bg-gradient-gaming bg-clip-text text-transparent">20+</div>
+                    <div className="text-xs text-muted-foreground">Members</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold bg-gradient-gaming bg-clip-text text-transparent">2024</div>
+                    <div className="text-xs text-muted-foreground">Established</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Developed By Section */}
         <Card className="border-glow bg-gradient-to-br from-card/80 to-secondary/30 backdrop-blur-sm mb-16 overflow-hidden opacity-0 animate-slide-up" style={{ animationDelay: '0.85s', animationFillMode: 'both' }}>
           <CardContent className="p-8">
@@ -164,7 +227,7 @@ const AboutPage = () => {
               {/* Developer Info */}
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Leroy Daniel Edison</h3>
-                <p className="text-primary font-medium mb-3">Full Stack Developer</p>
+                <p className="text-primary font-medium mb-3">Technical Council Member • Full Stack Developer</p>
                 <p className="text-muted-foreground mb-4 max-w-md">
                   Passionate about creating beautiful, interactive web experiences. 
                   Specializing in React, TypeScript, and modern UI/UX design.
@@ -224,7 +287,7 @@ const AboutPage = () => {
           <p className="flex items-center justify-center gap-2">
             Made with <Heart className="w-4 h-4 text-red-500 animate-pulse" /> using React & Tailwind CSS
           </p>
-          <p className="mt-2 text-sm">© 2024 Team Generator. All rights reserved.</p>
+          <p className="mt-2 text-sm">A Technical Council Project © 2024</p>
         </div>
       </div>
     </PageLayout>
