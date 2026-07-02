@@ -21,12 +21,22 @@ export async function downloadPdf(state: SessionState) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(18);
   doc.text(state.name, 40, 42);
+
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
   doc.setTextColor(120);
+  const prefix = `Generated with `;
+  doc.text(prefix, 40, 58);
+  const prefixWidth = doc.getTextWidth(prefix);
+
+  doc.setTextColor(11, 136, 84);
+  doc.textWithLink("TeamGen", 40 + prefixWidth, 58, { url: "https://teamgen-pcell.vercel.app/" });
+  const brandWidth = doc.getTextWidth("TeamGen");
+
+  doc.setTextColor(120);
   doc.text(
-    `Generated with TeamGen · ${new Date().toLocaleDateString()} · ${state.people.length} people`,
-    40,
+    ` · ${new Date().toLocaleDateString()} · ${state.people.length} people`,
+    40 + prefixWidth + brandWidth,
     58,
   );
 

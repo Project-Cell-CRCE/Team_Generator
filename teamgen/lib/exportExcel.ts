@@ -25,8 +25,11 @@ export async function downloadExcel(state: SessionState) {
 
   sheet.mergeCells(2, 1, 2, columnCount);
   const subtitle = sheet.getCell(2, 1);
-  subtitle.value = `Generated with TeamGen · ${new Date().toLocaleDateString()} · ${state.people.length} people`;
-  subtitle.font = { size: 10, italic: true, color: { argb: "FF767676" } };
+  subtitle.value = {
+    text: `Generated with TeamGen · teamgen-pcell.vercel.app · ${new Date().toLocaleDateString()} · ${state.people.length} people`,
+    hyperlink: "https://teamgen-pcell.vercel.app/",
+  };
+  subtitle.font = { size: 10, italic: true, underline: true, color: { argb: argb("#128A54") } };
 
   const headerRow = 4;
   state.teams.forEach((team, col) => {
