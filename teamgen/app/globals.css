@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f4f3ef;
+  --surface: #ffffff;
+  --surface-raised: #fbfaf8;
+  --foreground: #23282c;
+  --muted: #67716d;
+  --border: #e2e1da;
+  --accent: #128a54;
+  --accent-strong: #0d6e42;
+  --accent-soft: #e3f2ea;
+  --accent-foreground: #ffffff;
+  --danger: #d64545;
+}
+
+.dark {
+  --background: #131619;
+  --surface: #1c2126;
+  --surface-raised: #23292f;
+  --foreground: #e8ebe9;
+  --muted: #98a29d;
+  --border: #2d343a;
+  --accent: #2fb377;
+  --accent-strong: #4cc98d;
+  --accent-soft: #16281f;
+  --accent-foreground: #062516;
+  --danger: #e35b5b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-instrument), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
