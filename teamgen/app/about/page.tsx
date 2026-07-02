@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ExternalLink, FileSpreadsheet, Globe, ShieldCheck, Shuffle, Trophy, UserPlus } from "lucide-react";
+import { ExternalLink, FileSpreadsheet, Globe, History, ShieldCheck, Shuffle, Trophy, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -74,6 +74,8 @@ const DEVELOPERS = [
     role: "Core Developer",
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/leroy-edison-84303933b/", icon: LinkedinMark },
+      { label: "GitHub", href: "https://github.com/LeroyEdi7", icon: GithubMark },
+      { label: "Previous version", href: "https://pcell-team-gen.vercel.app/", icon: History },
     ],
   },
   {
